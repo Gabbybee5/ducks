@@ -13,6 +13,7 @@ mallards <- read_rds("data/mallards.rds")
 ```
 
 ```{r}
+#| message: false
 mallards |>
   filter(speed <= 30) |>
   mutate(month = fct_reorder(month, month_num)) |>
